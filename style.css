@@ -1,0 +1,47 @@
+body{
+    height: 2000px;
+}
+#main-container {
+  
+    padding: 20px;
+    width: 50%;
+    height: 180px;
+    margin: 150px;
+    display: flex;
+    gap: 20px;
+
+}
+
+#div1 {
+    border: 2px solid navy;
+    height: 180px;
+    width: 200px;
+    background-color: aqua;
+    display: inline-block;
+    z-index: 2;
+}
+
+#div2 {
+    border: 2px solid navy;
+    height: 180px;
+    width: 200px;
+    background-color: rgb(200, 11, 11);
+    display: inline-block;
+    position: relative;
+    top: 105px;
+    right: 100px;
+    z-index: 3;
+}
+
+#div3 {
+
+    border: 2px solid navy;
+    height: 180px;
+    width: 200px;
+    background-color: rgb(19, 229, 47);
+    display: inline-block;
+    position: relative;
+    top: 195px;
+    right: 200px;
+    z-index: 1;
+}

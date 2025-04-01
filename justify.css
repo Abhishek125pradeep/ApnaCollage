@@ -1,0 +1,42 @@
+.main-continer{
+border: 2px solid black; 
+padding: 20px;
+height: 30px;
+width: 30%;
+display: flex;
+gap: 75px;
+justify-content: center;
+position: absolute;
+bottom: 50%;
+left: 25%;
+align-items: center;
+
+
+}
+
+#div1{
+  border: 2px solid black;
+  height: 38px;
+  width: 30px;
+  border-radius: 50% 10% 50% 10%;
+  background-color: rgb(96, 96, 207);
+  
+  
+}
+
+#div2{
+    
+    border: 2px solid black;
+    height: 38px;
+    width: 30px;
+    border-radius: 1 rem;
+    background-color: rgb(239, 105, 141);
+}
+
+#div3{
+    border: 2px solid black;
+    height: 38px;
+    width: 30px;
+    border-radius: 70%;
+    background-color: rgb(83, 222, 130);
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          
+        function findlargest(arr){
+          var max = arr[0];
+          for(i = 0; i < arr.length ; i++){
+            if(arr[i] > max){
+              max = arr[i]
+            }
+          }
+          return max
+          }
+   
+console.log(findlargest([8,6]));
+
+ function FindFrequency(str){
+   
+      frequency = {};
+
+  for(let char of str){
+   if(char != " "){
+    if(frequency[char]){
+        frequency[char] = frequency[char]+1;
+    }else{
+        frequency[char] = 1; 
+    }
+   }
+  }
+
+   return  frequency
+
+ }
+ console.log(FindFrequency("learn java script from thatopa"));
+
+// let word = "nijjtin";
+// var reverseword = ""
+// for(var i =  word.length-1; i >= 0; i--){
+//     reverseword += word[i]
+// }
+
+
+// if(word === reverseword){
+//   console.log("its palindrom");
+  
+// }else{
+//     console.log("its not");
+    
+// }
+
+function findSecondLargest(arr){
+
+   let first = arr[0];
+   let second = -Infinity;
+
+   for(let i = 1; i < arr.length; i++){
+      if(arr[i] > first){
+       second = first;
+       first = arr[i]
+      }else if(arr[i] > second && arr[i] !== first){
+          second = arr[i]
+      }
+   }
+   return second
+}
+
+console.log(findSecondLargest([200,25, 38, ]));
+
+
+
+function findLargeWord(str1){
+    
+ let firstword = str1.split(' ');
+ let longestword = "";
+
+ for(let word of firstword){
+      if(word.length > longestword.length){
+           longestword = word
+      }
+ }
+ return longestword
+}
+
+console.log(findLargeWord("learn  formt thapa technical"));
+
+
+  
+
+
+
+  function findwordcount(str){
+
+    let count = 0;
+
+    for(let char of str){
+       
+      if(char === 'i'){
+         count++
+      }
+
+    }
+    return count
+
+  }
+  
+  console.log(findwordcount("Mississipi"));
+  
+
+    </script>
+</body>
+</html>

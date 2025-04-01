@@ -1,0 +1,25 @@
+/* li:first-child {
+   color: aqua;
+}
+
+li:last-child{
+  color: red;
+} */
+
+/* li:nth-child(odd){
+  color: red;
+} */
+ /* li:nth-child(even){
+  color: firebrick;
+ } */
+
+/* li:nth-child(3n +0){
+color: firebrick;
+} */
+
+/* input:focus{
+  background: #840d0d;
+} */
+
+
+

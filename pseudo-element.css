@@ -1,0 +1,18 @@
+
+p::first-line{
+    font-size: 35px;
+    color:red;
+}
+
+h2::before{
+ content: url('attach.png');
+}
+    
+
+h2::after{
+    content: " Content added after";
+}
+
+::selection{
+    background-color: aqua;
+}

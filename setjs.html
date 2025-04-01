@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let data = new Set([1, 2, 3, 4, 5, 6, 1, 1, 1 ]) 
+       console.log(data);
+       console.log(data[0]);
+       newArray = Array.from(data);
+      console.log(newArray);
+      console.log(newArray[2]);
+
+    // data.forEach(item =>{
+    //     console.warn(item * 2);
+         
+    //   })
+      
+      var Newlly = newArray.map((item)=>{
+            return item * 2;
+        
+      });
+      console.log(Newlly);
+      const Arr = ["mango", "apple", "banana"];
+      const [fruit,a] = Arr;
+    console.log(a);
+    
+    console.log(fruit);
+      
+      const myObject = { a: 1, b: 2, c: 3 };
+      const {a:first,c:second} = myObject;
+      console.log(first);
+      console.log(second);
+      console.log(Object.entries(myObject));
+      console.log(Object.keys(myObject));
+      console.log(Object.values(myObject));
+      console.log(myObject.hasOwnProperty(1));
+      
+      for(var key in myObject){
+       if(myObject.hasOwnProperty(key)){
+                 myObject[key] = myObject[key] * 2;
+       }
+      }
+      console.log(myObject);
+      
+    </script>
+</body>
+</html>

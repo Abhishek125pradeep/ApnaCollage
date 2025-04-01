@@ -1,0 +1,47 @@
+
+#parent {
+   
+    padding: 25px;
+    height: 200px;
+    width: 50%;
+    margin: 200px;
+    position: relative;
+    
+}
+
+#one {
+   border: 2px solid green; 
+   height: 200px;
+   width: 200px;
+   display: inline-block;
+   margin-left: 25px;
+   background-color: green;
+   position: relative; 
+    z-index: 3;
+}
+
+#two {
+    border: 2px solid firebrick;
+    height: 200px;
+    width: 200px;
+    display:inline-block;
+    margin-left: 25px;
+    background-color: firebrick;
+    position: relative;
+    top: 85px;
+    left: -70px;
+    z-index: 3;
+}
+
+#three {
+    border: 2px solid lightcoral;
+    height: 200px;
+    width: 200px;
+    display:inline-block;
+    margin-left: 25px;
+    background-color: lightcoral;
+    position: relative;
+    top: 145px;
+    left: -135px;
+    z-index: 1;
+}

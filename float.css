@@ -1,0 +1,15 @@
+ul {
+background-color: rgb(80, 83, 83);
+list-style-type: none;
+border: 2px solid greenyellow;
+overflow: auto;
+}
+
+li{
+  color: #FFF;
+  padding: 5px 10px;
+  float: left;
+  position: relative;
+  left: 30%; 
+  justify-content: center;
+}
