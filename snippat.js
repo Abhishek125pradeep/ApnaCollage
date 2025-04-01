@@ -98,3 +98,20 @@ function getValue(dataId,NextValueData){
 
 var array = ["SHahrukh",45,["heor",66]];
 console.log(array[2][0]);
+
+
+// getValue(1).then(()=>getValue(2))
+//  .then(()=> getValue(3))  
+//  .then(()=> getValue(4))
+//  .then(()=> getValue(5))
+
+// (async function Handlingresult(){
+   
+//   await getValue(1);
+//   await getValue(2);
+//   await getValue(3);
+//   await getValue(4)
+
+
+
+// })()
