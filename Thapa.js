@@ -155,3 +155,29 @@ console.log(DIffer([1, "appkle", 2, "bnana", 3, "orange", 4]))
 for (let i = 500; i >= 200; i -= 50) {
    console.log(i);
 }
+
+function DIffer(arr){
+   let alpha = [];
+   let num = [];
+   
+   for(let i = 0; i < arr.length; i++){
+       const char = arr[i];
+       
+       if(typeof char=== 'number'){
+            
+            num.push(char)
+           
+       }else{
+           alpha.push(char)
+       }
+   }
+   
+   return {numbers: num, alphabets: alpha}
+}
+
+console.log(DIffer([1, "appkle", 2, "bnana", 3, "orange", 4]))
+
+
+for (let i = 500; i >= 200; i -= 50) {
+   console.log(i);
+}
