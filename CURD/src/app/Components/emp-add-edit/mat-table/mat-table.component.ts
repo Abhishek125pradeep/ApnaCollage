@@ -40,7 +40,9 @@ export class MatTableComponent {
     })
   }
   
-  displayedColumns: string[] = ['lastName', 'firstName', 'email', 'education', 'company', 'experiance', 'package'];
+  displayedColumns: string[] = ['lastName', 'firstName', 'email', 'education',  'package', 'company', 'experiance',];
+
+  
   dataSource = new MatTableDataSource(this.EMPLOYEE_DATA);
 
 }
