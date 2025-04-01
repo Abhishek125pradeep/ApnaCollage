@@ -50,7 +50,7 @@ export class EmpAddEditComponent {
      
    next : (val :any) =>{
    console.log(val);
-   alert('Employee Added Successfully ')
+   alert('Employee Added Successfully have a nice day ')
    this.dialogRef.close()
    },
 
