@@ -1,15 +1,24 @@
-var person = {
-    Fname : "abhishek",
-    age :25,
-    // get getFullName(){
-    //     return `${this.Fname.toUpperCase()}`
-    // },
+let john = {
+    names : 'John',
+    birthYear : 1998,
+    Annualsallary : 12000,
 
-    set setName(n){
-       this.Fname = n.toUpperCase()
+   get getName(){
+     return this.names
+    },
+   
+    set setName(val){
+       this.names = val;
     }
+    
 }
-person.setName = "ajit"
-console.log(person);
+
+console.log("name", john.getName);
+john.setName = "john smith";
+console.log(john.getName);
+john.setName = "Abhishek";
+console.log(john.getName);
+
+
 
 
