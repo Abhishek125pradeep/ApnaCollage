@@ -1458,6 +1458,3 @@ console.log(hj - x);
 // [1] + 1	"11"	[1] → "1", so "1" + 1 → "11"
 
 
-for (let i = 500; i >= 200; i -= 50) {
-    console.log(i);
-}
