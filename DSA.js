@@ -1477,4 +1477,17 @@ console.log(hj - x);
 //  jacks.names = "bubble";
 //  console.log(marks)
 //  console.log(jacks)
- 
+let arr1 = [1, 2, 3];
+let arr2 = [...arr1]; // Shallow copy
+console.log(arr2);
+arr2[0] = 100;
+console.log(arr1); 
+console.log(arr2);
+// [1, 2, 3] ✅ original not affected
+let arr = [1, 2, [3, 4]];
+let arr2 = JSON.parse(JSON.stringify(arr1))
+
+arr2[2][0] = 999;
+
+console.log(arr1); // [1, 2, [999, 4]] ❌ original affected
+console.log(arr2);
