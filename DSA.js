@@ -1458,3 +1458,23 @@ console.log(hj - x);
 // [1] + 1	"11"	[1] → "1", so "1" + 1 → "11"
 
 
+// let marks = {
+  
+//     names : "marks",
+//     lastname : "hanry",
+   
+//      jack : {
+//        name : "jack",
+//        lastname : "sparow"
+//      }
+   
+   
+   
+//  }
+ 
+ 
+//  let jacks = {marks};
+//  jacks.names = "bubble";
+//  console.log(marks)
+//  console.log(jacks)
+ 
