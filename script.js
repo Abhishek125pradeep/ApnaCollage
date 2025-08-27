@@ -12,3 +12,24 @@ if (userage >= 25) {
     document.writeln("I am Student")
 }
 
+
+
+function test(){
+    
+    function foo(){}
+    
+    var bar;
+    foo();
+    bar();
+    function foo(){
+        console.log("foo")
+    }
+    
+    bar = function(){
+        console.log("bar")
+    }
+    
+}
+
+
+test()

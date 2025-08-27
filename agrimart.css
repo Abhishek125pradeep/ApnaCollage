@@ -1,0 +1,109 @@
+/* General Improvements */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+/* Header */
+.bg-green-700 {
+  background-color: #047857; /* Slightly more vibrant green */
+}
+.text-white:hover {
+  text-decoration: underline;
+}
+
+/* Breadcrumbs */
+.text-gray-600 {
+  color: #6b7280;
+}
+.text-gray-600 a:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+/* Product Image */
+.rounded-lg {
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+.rounded-lg:hover {
+  transform: scale(1.02);
+}
+
+/* Price Section */
+.text-green-600 {
+  color: #16a34a; /* Brighter green for price */
+}
+.line-through {
+  color: #9ca3af; /* Muted original price */
+}
+
+/* Quantity Dropdown */
+select {
+  border: 2px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.3s ease;
+}
+select:focus {
+  border-color: #16a34a;
+  outline: none;
+}
+
+/* Buttons */
+button.bg-green-600 {
+  background-color: #059669;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button.bg-green-600:hover {
+  background-color: #047857;
+  transform: translateY(-2px);
+}
+button.bg-yellow-500 {
+  background-color: #f59e0b;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button.bg-yellow-500:hover {
+  background-color: #d97706;
+  transform: translateY(-2px);
+}
+
+/* Tabs Section */
+.border-b-2.border-gray-300 {
+  border-color: #e5e7eb;
+}
+.font-medium:hover {
+  color: #047857;
+}
+
+/* Review Cards */
+.shadow {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.rounded-lg {
+  border-radius: 1rem;
+}
+
+/* Avatar */
+.w-12.h-12 {
+  border: 2px solid #e5e7eb;
+}
+
+/* Footer (if any in future) */
+footer {
+  background-color: #047857;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Mobile responsiveness tweaks */
+@media (max-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+}

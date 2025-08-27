@@ -156,7 +156,7 @@ console.log(first); // 'red'
  // ['green', 'blue']
 
 
-const person = { name: 'John', age: 30 };
+const person = { name: 'John', age: '30' };
 
 // Old way:
 // const name = person.name;
@@ -295,7 +295,7 @@ console.log(result); // Output: 8
 
 
 
-function Findseconlargest(arr){
+function Findlargest(arr){
     debugger;
     if(arr.length < 2){
         
@@ -332,4 +332,42 @@ function Findseconlargest(arr){
 }
 
 console.log(Findseconlargest([21, 23, 7, 50, 87, 3, 27]));
+
+
+
+function Findsecondlargest(arr){
+    
+    if(arr.length < 2){
+        return "arr"
+    }
+    
+    let largest = arr[0];
+    let secondlargest = null;
+    
+    for(let i = 1; i < arr.length; i++){
+        let current = arr[i];
+        
+        if(current > largest){
+            secondlargest = largest;
+            largest = current;
+        }else if(current > largest){
+            if(secondlargest === null || largest > secondlargest){
+                
+                secondlargest = current;
+            }
+        }
+    } if(secondlargest === null){
+        return "djfisja"
+    }
+    return secondlargest
+}
+
+console.log(Findsecondlargest([12, 11, 32, 4]))
+
+
+
+
+
+
+
 
