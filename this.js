@@ -632,3 +632,7 @@
 let arr = []
 let user = {}
 console.log(Object.__proto__);
+
+
+
+
