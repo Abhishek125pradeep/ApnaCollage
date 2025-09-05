@@ -1,53 +1,39 @@
 
+class emp {
 
-class CreateUser{
-
-    constructor(a,b,c){
-
-        this.firstname = a,
-        this.lastname = b,
-        this.age = c
-        
-         console.log("hiiiii");
-         console.log(this);
-         
-
-
+    constructor(names) {
+        console.log("emp COnstructor called.....");
+        this.name = names
     }
 
-   
-    
-
-
-getBirthYear(){
-  
-    return new Date().getFullYear() - this.age
-
-}
-
-
-}
-
-const value4 = new CreateUser("Abhishejk","nagrale",45);
-const value8 = new CreateUser("nilesh","karale",95);
-console.log(value4.getBirthYear == value8.getBirthYear);
-
-console.log(value8);
-
-
-
-
-class User{
-
-    constructor(name){
-       
-        this.name = name;
-
-        console.log(this);
-       
-        
+    getName() {
+        return `${this.name}`
     }
 
 }
 
-let user1 = new User("Hardik")
+
+class mng extends emp {
+
+    constructor(n, d) {
+        super(n)
+        this.department = d;
+    }
+
+     getName(){
+        console.log("hiiiii");
+        
+     }
+
+
+    Info(){
+        this.getName()
+        super.getName()
+        return `${this.name} is manager of department`
+    }
+
+}
+
+let manager = new mng("vishvjeet", 'web developer');
+console.log(manager.getName());
+console.log(manager.Info());

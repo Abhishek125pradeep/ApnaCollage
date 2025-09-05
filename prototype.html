@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+    // let User1 = {}
+    // console.log(User1);
+
+
+    function Person(name){
+
+        this.name = name
+
+    }
+
+    let User = new Person("suresh")
+    console.log(User);
+
+
+
+    class emp {
+
+        constructor(names) {
+
+            this.names = names
+            console.log("Emp constructor called....");
+
+        }
+
+    }
+
+
+
+    class manager extends emp {
+
+    }
+
+    let manger = new manager("vishvjeet")
+    console.log(manger);
+
+
+
+    let Users = {
+
+     firstname : "Abhishek",
+     lastname : "Pradeep",
+     
+     getFullName: function(){
+        return `${this.firstname} ${this.lastname}`
+     } 
+
+    }
+
+      
+
+
+  let Users2 = {
+
+        firstname: "Jack",
+        lastname: "Sparrow",
+
+
+
+    }
+
+
+    let Mark = {
+
+        firstname: "Mark",
+        lastname: "Hanrray",
+
+
+
+    }
+
+
+
+
+
+    console.log(Users.getFullName.call(Users2));
+    console.log(Users.getFullName.call(Mark));    
+     let arr = [1,2,3,4]
+     console.log(arr.__proto__);
+     console.log(arr.__proto__ === Array.prototype);
+     console.log(arr.__proto__.__proto__);
+     console.log(arr.__proto__.__proto__ == Object.prototype);
+                 
+</script>
+
+</html>
