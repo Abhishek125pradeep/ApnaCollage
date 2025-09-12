@@ -1,0 +1,14 @@
+<!-- learnparams.component.html -->
+<h1>User Details</h1>
+
+<div *ngIf="employee; else notFound">
+  <p><strong>ID:</strong> {{ employee.id }}</p>
+  <p><strong>Firstname:</strong> {{ employee.firstname }}</p>
+  <p><strong>Lastname:</strong> {{ employee.lastname }}</p>
+  <p><strong>Location:</strong> {{ employee.location }}</p>
+  <p><strong>Role:</strong> {{ employee.role }}</p>
+</div>
+
+<ng-template #notFound>
+  <p>User not found!</p>
+</ng-template>
