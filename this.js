@@ -551,7 +551,7 @@
 
 // function findMinMax(arr) {
 //     debugger;
-   
+
 //     if(arr.length === 0){
 //       return {max : null, min:null}
 //     }
@@ -560,7 +560,7 @@
 //     let min = arr[0];
 
 //     for(let i = 1; i < arr.length; i++){
-    
+
 //       if(arr[i] < min){
 //          min = arr[i]
 //       }
@@ -604,7 +604,7 @@
 // console.log(fibbonaci(10))
 
 // function findMissingNumber(arr){
-   
+
 //   debugger;
 
 //    let n = arr.length + 1;
@@ -612,7 +612,7 @@
 //    let actualvalue = 0;
 
 //    for(let i = 1; i <= n; i++){
-       
+
 //       expectedvalue += i;
 
 //    }
@@ -631,8 +631,85 @@
 
 let arr = []
 let user = {}
-console.log(Object.__proto__);
+console.log(Array.prototype === arr.__proto__);
+console.log(arr.__proto__.__proto__ === Array.prototype.__proto__);
+console.log(arr.__proto__.__proto__ === Object.prototype);
 
 
 
 
+let User = {
+   names: "abhishek",
+   mid: "pradeep",
+   lastname: "nagra",
+   valuethis: this,
+   arrow2: () => {
+      console.log(this);
+
+   },
+
+   getFullName: function () {
+
+      console.log(this)
+
+      let arrow = () => {
+         console.log(this);
+
+      }
+
+      arrow();
+
+      setTimeout(function () {
+         console.log(this.names);
+
+      });
+
+
+
+   }
+
+
+
+
+
+}
+console.log(User.getFullName())
+console.log(User.valuethis)
+console.log(User.arrow2());
+
+
+function ShowMessage() {
+
+   console.log("hey there!!!!");
+
+
+}
+
+let customer = {
+   ShowMessage,
+}
+
+ShowMessage();
+let obj = new ShowMessage();
+console.log(obj);
+console.log(customer.ShowMessage());
+
+
+ShowMessage.call();
+
+
+function learnthis(){
+ 
+   'use strict'
+
+   console.log(this);
+   
+
+}
+
+learnthis();
+
+
+
+// ruleNo 1 :  if we call this inside a function value of this is window object
+//but if strict moe is on inside that function on that time value is  undefine

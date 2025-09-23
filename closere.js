@@ -331,7 +331,7 @@ function Findlargest(arr){
   return secondLargest;
 }
 
-console.log(Findseconlargest([21, 23, 7, 50, 87, 3, 27]));
+//console.log(Findseconlargest([21, 23, 7, 50, 87, 3, 27]));
 
 
 
@@ -366,8 +366,22 @@ console.log(Findsecondlargest([12, 11, 32, 4]))
 
 
 
+function x(){
 
+ var s = "hellow"
 
+  function y(){
+
+   console.log(s);
+   
+  }
+
+   return y
+
+}
+let z = x();
+console.log(z);
+z();
 
 
 
