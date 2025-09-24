@@ -884,3 +884,14 @@ function sortnumberstr(str){
 
 console.log(sortnumberstr([1,2,3,"happy","birth","dat"]));
 
+// Q} can javascript object conver json:
+
+const obj33 = {
+  name: "Abhishek",
+  age: 25,
+  city: "Nagpur"
+};
+
+// Convert object to JSON string
+const jsonstring = JSON.stringify(obj33)
+// Output: {"name":"Abhishek","age":25,"city":"Nagpur"}
