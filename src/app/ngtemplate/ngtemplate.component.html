@@ -1,0 +1,22 @@
+
+<h3>Exercise 1: ngIf with ng-template</h3>
+
+<!-- <div *ngIf="isLoggedIn; else guestTemplat4">
+  <p>Welcome Back User</p>
+</div>
+
+<ng-template #guestTemplat4>
+ <p>Please log in to continue</p>
+</ng-template>
+
+<button (click)="onClick()">Toogle</button> -->
+
+
+<ng-container *ngIf="toggleOn; else template">
+ <p>Toggle is on</p>
+</ng-container>
+
+<ng-template #template>
+toggle is off
+</ng-template><br>
+<button (click)="onClick()">Toogle</button>

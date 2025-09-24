@@ -1,0 +1,18 @@
+<!-- <p>parent works!</p>
+
+
+<app-child [massagefromparent]="massage"></app-child> -->
+
+
+<h1>Welcome to the Form</h1>
+
+<!-- The template reference variable #usernameInput is the key -->
+<input 
+  type="text" 
+  #usernameInput 
+  placeholder="Enter your username" 
+  (keyup.enter)="clearInput()"
+>
+<button (click)="clearInput()">Clear Input</button>
+
+<p>Try clicking the button or pressing Enter to clear and re-focus the input.</p>
