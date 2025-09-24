@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+        console.log(fruits.slice(1, 4));
+        const fruits2 = 'applebanana';
+        console.log(fruits2.slice(-5, -3));
+        
+        const fruits3 = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+        // console.log(fruits3.splice(1,2));
+        fruits3.splice(1,1,"grapes")
+        console.log(fruits3);
+        
+        //splice() is ONLY an array method - it does NOT work with strings.;
+        // The reduce() method executes a reducer function on each element of an array, resulting in a single output value.
+      
+         const numbers = [1, 2, 3, 4, 5];
+         const sum = numbers.reduce((acc,cur,i)=>{
+            return acc + cur
+         })
+         console.log(sum);
+         
+      let Charector = "hellow word";
+     let res = ""
+      for(let i = Charector.length-1; i  >= 0; i--){
+        //   console.log(Charector[i]);
+
+        res = res + Charector.charAt(i);
+        console.log(res);
+        
+     
+      }
+
+
+    </script>
+</body>
+
+</html>

@@ -882,4 +882,5 @@ function sortnumberstr(str){
     return {number,string}
 }
 
-console.log(sortnumberstr([1,2,3,"happy","birth","dat"]))
+console.log(sortnumberstr([1,2,3,"happy","birth","dat"]));
+
