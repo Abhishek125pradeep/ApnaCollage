@@ -473,8 +473,8 @@ console.log([] == {});   // false;
 // console.log([] === {});
 
 
-// console.log([] == 0); 
-// console.log([] === 0);
+// console.log([] == 0); true
+// console.log([] === 0);false
 
 // == does type coercion.
 
@@ -765,10 +765,10 @@ const deepArray = [1, [2, [3, [4, 5]]], 6];
 
 console.log(first);  // 1
 console.log(second); // 2
-console.log(third);  // 3
-console.log(fourth); // 4
-console.log(fifth);  // 5
-console.log(sixth);  // 6
+// console.log(third);  // 3
+// console.log(fourth); // 4
+// console.log(fifth);  // 5
+// console.log(sixth);  // 6
 
 // const user = {
 //     name: 'John',
@@ -784,11 +784,11 @@ console.log(sixth);  // 6
 
 // const { name, address: { street, city, coordinates: { lat, lng } } } = user;
 
-console.log(name);    // 'John'
-console.log(street);  // '123 Main St'
-console.log(city);    // 'New York'
-console.log(lat);     // 40.7128
-console.log(lng);     // -74.0060;
+// console.log(name);    // 'John'
+// console.log(street);  // '123 Main St'
+// console.log(city);    // 'New York'
+// console.log(lat);     // 40.7128
+// console.log(lng);     // -74.0060;
 
 
 
@@ -895,3 +895,582 @@ const obj33 = {
 // Convert object to JSON string
 const jsonstring = JSON.stringify(obj33)
 // Output: {"name":"Abhishek","age":25,"city":"Nagpur"}
+
+
+
+function abc(x =0,y,z){
+
+}
+console.log(abc(1));
+
+
+
+function xyz(a, b=4,c,d,e){
+
+}
+
+function pqr(a, b,c=8){
+
+}
+
+
+
+console.log(abc.length); //3
+console.log(xyz.length);//3
+console.log(pqr.length);//0
+
+// In JavaScript, arguments are assigned to parameters by position (index).
+
+
+let names = "jatin";
+names[1] = "bisht";
+console.log(names);
+
+// Strings in JavaScript are immutable (cannot be changed in place).
+
+// When you try names[1] = "bisht", JS doesn’t throw an error, but it silently ignores the assignment.
+
+// Why? Because "jatin"[1] refers to "a" (character at index 1), and you cannot replace a single character of a string by assignment.
+
+// So the original string "jatin" stays the same.
+
+
+// each word on next line
+// let str = "my name is jatin bisht";
+
+// let result = str
+//   .split(" ")
+//   .map(itom => itom.charAt(0).toUpperCase() + itom.slice(1))
+//   .join("\n");
+
+// console.log(result);
+
+
+// let arr = ["chandan", "and"];
+
+// let first = arr[0];
+// let second = arr[1];
+
+// let isTrue = false;
+
+// for (let i = 0; i < second.length; i++) {
+//   let char = second[i];
+//   let found = false;
+
+//   // check manually if char exists in first string
+//   for (let j = 0; j < first.length; j++) {
+//     if (char === first[j]) {
+//       found = true;
+//       break;
+//     }
+//   }
+
+//   if (!found) {
+//     isTrue = true;  // char not found
+//     break;
+//   }
+// }
+
+// console.log(isTrue);
+
+
+// let result =(function fibonaci(n){
+    
+//     let fib = [2,3];
+//     for(let i = 2; i < n; i++){
+        
+//         fib[i] = fib[i -1] + fib[i - 2]
+        
+//     }
+    
+//     return fib.slice(0,n)
+    
+// })(10)
+// console.log(result);
+
+// The ?? (nullish coalescing) operator returns the right-hand value only if the left-hand value is null or undefined.
+console.log(0 || null);
+console.log(0 ?? undefined);
+console.log("" ?? "");
+console.log([] ?? "Hellow");
+console.log({} ?? "Hellow");
+console.log(false ==  []);
+
+
+
+// Logical OR (||)
+
+// Returns the first truthy value.
+
+// If both sides are falsy, it has no choice but to return the last value.
+
+console.log(0 || null);   // null (both falsy → last one returned)
+console.log("" || false); // false (both falsy → last one returned)
+
+
+// 2. Logical AND (&&)
+
+// Returns the first falsy value.
+
+// If both sides are truthy, it returns the last one.
+
+console.log(0 && null);   // 0 (first falsy → returned immediately)
+console.log(1 && "hi");   // "hi" (both truthy → last one returned)
+
+
+
+function infinitecurrying(x){
+
+    return function inner(y){
+
+      if(y === undefined){
+           
+        return x;
+      }
+
+     return infinitecurrying(x + y)
+    }
+    
+
+}
+
+console.log(infinitecurrying(1)(2)(3)(4)(5)(6)(7)(8)());
+
+
+// try{
+
+// console.log(marks);
+// //DSA.js:1040 Uncaught ReferenceError: marks is not defined
+// marks = "hellow word"
+
+// }
+// catch(err){
+// console.log(err.message);
+
+// }
+
+
+
+// console.log(marks);
+
+
+
+// function one(a = 5, b = 7) {
+//   console.log(a + b);
+// }
+
+// one(undefined, 20);
+
+
+// In JavaScript, default parameters are used only if the argument is undefined.
+
+// Here:
+
+// a = undefined → default a = 5 is used.
+
+// b = 20 → overrides default b = 7.
+
+// ✅ Calculation: 5 + 20 = 25
+
+
+// function two(a = 5, b = 7) {
+//   console.log(a + b);
+// }
+
+// two(null, 20);
+
+
+// Default parameters are not used for null, only for undefined.
+
+// Here:
+
+// a = null → default a = 5 is ignored.
+
+// b = 20 → overrides default b = 7.
+
+// ✅ Calculation: null + 20 → In JavaScript, null is coerced to 0 when used with +.
+
+// So result is 0 + 20 = 20.
+
+
+console.log(100 + undefined);
+// 100 + NaN = output NaN
+
+// The + operator in JavaScript does type coercion.
+
+// 100 is a number, undefined is… well, undefined.
+
+// When you try to add a number + undefined, JavaScript cannot convert undefined into a number meaningfully.
+
+
+
+console.log(100 + null);
+
+// 100 is a number.
+
+// null in arithmetic is converted to 0.
+
+// So 100 + null → 100 + 0 → 100.
+
+
+
+// var sum = 100 +  score;
+// 100 + NaN
+// var score = 500;
+// console.log(sum);
+
+
+
+
+let count = 0;
+let nums = [0, 1, 2, 3, 4];
+
+nums.forEach(num => {
+    count = count + 1;
+});
+console.log(count);
+
+const objjhj = {
+    a: 1,
+    c: 3,
+    "a": 6,
+    b: 7
+};
+
+console.log(objjhj);
+// Object keys must be unique.
+
+// If a key is repeated, the last value wins.
+
+// Here:
+
+// a: 1 is overwritten by "a": 6.
+
+// Data types of the keys:
+// In your object objjhj:
+
+// a: string (all object keys in JavaScript are strings or Symbols)
+
+// c: string
+
+// "a": string (but this duplicates the first a key)
+
+// b: string
+
+
+
+
+// const data = {
+//     nase : "nabil"
+// }
+
+// const abc = [1, 2, 3, 4];
+
+// console.log(delete data)
+// console.log(data)
+// console.log(delete abc)
+// console.log(abc)
+
+
+// The delete operator is used to delete properties from objects, but it cannot delete variables declared with:
+
+// const
+
+// let
+
+// var (in global scope)
+
+// Function parameters
+
+// Since data and abc are variables (not properties), delete returns false and the variables remain unchanged.
+
+
+// What delete can actually delete:
+
+// const obj = { name: "John", age: 30 };
+// console.log(delete obj.name);  // true
+// console.log(obj); 
+
+
+
+let outer = {
+  count: 0,
+  inc: function () {
+    setTimeout(() => {
+      this.count++;
+      console.log(this.count);
+    }, 1000);
+  }
+}
+outer.inc();
+
+
+// outer object is created
+
+// It has a property count = 0
+
+// And a method inc.
+
+// Call outer.inc()
+
+// Inside inc, setTimeout is scheduled to run after 1000 ms (1 second).
+
+// Arrow function in setTimeout
+
+// Arrow functions don’t have their own this.
+
+// They use this from the surrounding scope (inc method).
+
+// In this case, this inside inc refers to outer.
+
+// After 1 second
+
+// The arrow function runs.
+
+// this.count++ → outer.count = 0 + 1 = 1.
+
+// console.log(this.count) → prints 1.
+
+
+
+// let outer = {
+//   count: 0,
+//   inc: function () {
+//     setTimeout(function () {
+//       this.count++;
+//       console.log(this.count);
+//     }, 1000);
+//   }
+// }
+// outer.inc();
+
+
+// Step by Step
+
+// outer object created with count = 0.
+
+// outer.inc() is called → schedules a setTimeout.
+
+// After 1000 ms, the callback runs:
+
+// function() {
+//   this.count++;
+//   console.log(this.count);
+// }
+
+
+// Here, this is not outer anymore.
+
+// In JavaScript, a normal function’s this depends on how the function is called.
+
+// setTimeout calls the function without a context → so this defaults to:
+
+// window (in browsers, non-strict mode)
+
+// undefined (in strict mode, or in modules like ES6 by default)
+
+// So:
+
+// If non-strict mode in browser → this === window.
+
+// window.count is undefined initially.
+
+// this.count++ → undefined + 1 = NaN.
+
+// Output: NaN.
+
+// If strict mode / ES6 module → this === undefined.
+
+// this.count++ → Error: Cannot read properties of undefined.
+
+// ✅ Possible Outputs
+
+// NaN (most common in browser non-strict mode).;
+
+
+
+var num1;
+num1 = 10;
+
+function print() {
+    var num1;
+    if (num1 > 20) {
+        num1 = 50;
+    }
+    console.log(num1);
+}
+
+print();
+// if (num1 > 20) {
+//     num1 = 50;
+// }
+// Here, local num1 is undefined.
+
+// undefined > 20 → false.
+
+
+// var a = 10;
+// console.log(a);// 10
+
+// function fn() {
+//     console.log(a);//undefined
+//     var a = 20;
+//     a++;
+//     console.log(a);//21
+//     if (a) {
+//         var a = 30;
+//         a++;
+//         console.log(a);//31
+//     }
+//     console.log(a);//31
+// }
+
+// fn();
+// console.log(a);//10
+
+
+// for (var i = 0; i < 3; i++) {
+//   (function () {
+//     console.log(i)
+//   })()
+// }
+
+// for (var i = 0; i < 3; i++) {
+//   (function () {
+//     setTimeout(() => {
+//       console.log(i)
+//     })
+//   })()
+// }
+
+
+// let count = 2;
+
+// const obj = {
+    
+//     count : 4,
+    
+//     increament : ()=>{
+         
+//          this.count++
+//         console.log(this.count)
+//     },
+    
+//     decrement: function(){
+//         this.count--
+//         console.log(this.count)
+//     }
+// }
+
+
+// obj.increament();//NaN
+// obj.decrement();//3
+
+console.log(bar)//function body
+function bar() {
+  console.log("helllw word")
+}
+
+var bar = "fgdgfd";
+console.log(bar)//fgdgfd
+
+
+function foo() {
+    function employeeId() {
+        console.log(typeof employeeId);
+    }
+    employeeId();  // call the function
+    return;
+}
+
+console.log(typeof employeeId);
+
+//function
+
+
+function abc(){
+    
+    let a= b=3;
+    return a
+}
+abc()
+console.log(b)
+console.log(a);
+//because b is global variable it b will gave 3 and a is referance erro
+
+function print() {
+    setTimeout(function () {
+        console.log(name);
+    }, 0);
+    var name = "Demo";
+}
+
+print();
+
+
+//Demo
+
+console.log("jatin" > 9); 
+console.log("jatin" < 9);
+
+
+// Step 1: What happens when we compare string with number in JS?
+
+// In JavaScript, when you use < or >, it tries to convert both values to numbers (if possible).
+
+// "jatin" is a string that cannot be converted to a valid number.
+
+// Number("jatin") → NaN.
+
+// So both comparisons actually become:
+
+// console.log(NaN > 9);  // false
+// console.log(NaN < 9);  // false;
+
+
+
+function mergeArrays(...arrays) {
+    let result = [];
+    
+    function flatten(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (Array.isArray(arr[i])) {
+                flatten(arr[i]);
+            } else {
+                result.push(arr[i]);
+            }
+        }
+    }
+    
+    for (let i = 0; i < arrays.length; i++) {
+        flatten(arrays[i]);
+    }
+    
+    return result;
+}
+
+console.log(mergeArrays([1, [2, 3, 4 , [8, 9]], [5, 6]]));
+
+
+// let arr = [1, 2, 5, 8, 9, 10];
+// let missing = [];
+
+// let n = 10; // maximum number
+
+// for (let i = 1; i <= n; i++) {
+//   let found = false;
+  
+//   // check if i exists in arr
+//   for (let j = 0; j < arr.length; j++) {
+//     if (arr[j] === i) {
+//       found = true;
+//       break;
+//     }
+//   }
+  
+//   if (!found) {
+//     missing.push(i);
+//   }
+// }
+
+// console.log("Missing numbers:", missing);
