@@ -147,24 +147,60 @@ function fetchData() {
 
 
 
-async function getData() {
+// async function getData() {
 
-  try {
+//   try {
 
-    let result = await fetchData();
+//     let result = await fetchData();
 
-    console.log(result);
+//     console.log(result);
 
-  } catch (err) {
-    console.log(result);
+//   } catch (err) {
+//     console.log(result);
 
+//   }
+
+
+
+
+
+// }
+
+
+// getData()
+
+
+
+class Dog{
+
+  Sound(){
+    console.log("Dog is Barking");
+    
   }
-
-
-
-
 
 }
 
 
-getData()
+class Birds extends Dog{
+
+Sound(){
+  console.log("Birds is singing");
+  
+}
+
+}
+
+
+class Cows extends Birds{
+
+  Sound(){
+    console.log("Cow is bitting");
+    
+  }
+}
+
+
+const Shapes = [new Dog(),new Birds(), new Cows()];
+Shapes.forEach(shape => shape.Sound())
+
+// Many forms — the same method behaves differently based on the object calling it.
