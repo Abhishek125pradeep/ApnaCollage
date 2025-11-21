@@ -323,4 +323,20 @@ function nestedandsortoutarr(arr1, arr2){
 const array1 = [3, 1, 4];
  const array2 = [2, 5, 6];
 
-console.log(nestedandsortoutarr(array1,array2))
+console.log(nestedandsortoutarr(array1,array2));
+
+
+
+
+let str = "abcde";
+let count = 2;
+let res = "";
+debugger
+for (let i = str.length - count; i < str.length; i++) {
+  res += str[i];
+}
+for (let i = 0; i < str.length - count; i++) {
+  res += str[i];
+}
+
+console.log(res); // deabc

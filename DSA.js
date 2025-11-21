@@ -438,7 +438,7 @@ console.log([] == "");
 //true
 
 
-function duplicateitom(arr){
+function findDuplicateitom(arr){
     debugger
     let result = [];
     let n = arr.length
@@ -461,7 +461,7 @@ function duplicateitom(arr){
 }
 
 let listarray = [1, 2, 3, 4, 5, 6, 7, 2, 5];
-console.log(duplicateitom(listarray))
+console.log(findDuplicateitom(listarray))
 
 
 
@@ -475,6 +475,9 @@ console.log([] == {});   // false;
 
 // console.log([] === {});
 
+// === (Strict Equality) does NOT perform type coercion
+
+// == (Loose Equality) DOES perform type coercion
 
 // console.log([] == 0); true
 // console.log([] === 0);false
@@ -1975,7 +1978,20 @@ console.log(getData)// function body
  
 // await new Promise((resolve,reject)=>{
      
-     
+  
+  
+//   const obj = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// // Make only 'name' property immutable
+// Object.defineProperty(obj, 'name', {
+//   value: obj.name,
+//   writable: false,
+//   configurable: false
+// });
      
 //       setTimeout(()=>{
 //         resolve("promiose resolve")
@@ -2867,6 +2883,8 @@ console.log(names)//10
 
 
 console.log("uhku" > 5); // false
+
+console.log("uhku" > "njk"); // true
 
 // Why "uhku" > 5 is false
 // When comparing a string with a number in JavaScript:
@@ -3903,6 +3921,11 @@ const boundFn = showname.bind(obj1);
 // console.log(null == null)
 // console.log(null === null)
 
+// let a = null;        // explicitly set to no value
+// let b = undefined;   // never assigned a value
+
+// console.log(a == b); // true - both represent "nothingness"
+
 
 // let arr = [1, 2, 3, 4, 5];
 
@@ -3914,3 +3937,101 @@ const boundFn = showname.bind(obj1);
 
 
 // console.log(arr.sum())
+
+
+// / let arr = [1, 2, 5, 8, 9, 10];
+// let missing = [];
+
+// let n = 10; // maximum number
+
+// for (let i = 1; i <= n; i++) {
+//   let found = false;
+  
+//   // check if i exists in arr
+//   for (let j = 0; j < arr.length; j++) {
+//     if (arr[j] === i) {
+//       found = true;
+//       break;
+//     }
+//   }
+  
+//   if (!found) {
+//     missing.push(i);
+//   }
+// }
+
+
+//I'll explain the key differences between __proto__ and prototype in JavaScript.
+
+// prototype Property
+// Exists on: Constructor functions
+
+// Purpose: Used to set up inheritance for objects created with new
+
+// Usage: When you create a function, it automatically gets a prototype property
+
+// function Person(name) {
+//     this.name = name;
+// }
+
+// // Adding methods to prototype
+// Person.prototype.greet = function() {
+//     return `Hello, I'm ${this.name}`;
+// };
+
+// const john = new Person('John');
+// john.greet(); // "Hello, I'm John"
+
+// __proto__ Property
+// Exists on: Object instances
+
+// Purpose: Points to the prototype of the constructor that created the object
+
+// Note: __proto__ is deprecated - use Object.getPrototypeOf() instead
+
+// javascript
+// function Person(name) {
+//     this.name = name;
+// }
+
+// const john = new Person('John');
+
+// // These are equivalent (point to same object)
+// console.log(john.__proto__ === Person.prototype); // true
+// console.log(Object.getPrototypeOf(john) === Person.prototype); // true
+
+
+// Aspect	prototype	__proto__
+// Where it exists	Constructor functions	Object instances
+// Purpose	Blueprint for inheritance	Reference to actual prototype
+
+
+// how to set any method object prototype
+
+// const obj = {
+//   name: "John"
+// };
+
+// Using __proto__ (avoid in production)
+// obj.__proto__.greet = function() {
+//   return `Hello, I'm ${this.name}`;
+// };
+//__proto__ works on object instances - like your object variable
+
+// prototype works on constructor functions - like function Person() {}
+// console.log(obj.greet()); // "Hello, I'm John"
+
+// function Person(name) {
+//     this.name = name;
+// }
+
+// Adding method to prototype (for instances)
+// Person.prototype.greet = function() {
+//     return `Hello, I'm ${this.name}`;
+// };
+
+// // Constructor function itself has __proto__
+// console.log(Person.__proto__ === Function.prototype); // true
+
+// // And also has prototype property
+// console.log(typeof Person.prototype); // "object"
